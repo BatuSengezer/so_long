@@ -6,7 +6,7 @@
 #    By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 16:30:24 by bsengeze          #+#    #+#              #
-#    Updated: 2023/07/02 16:02:18 by bsengeze         ###   ########.fr        #
+#    Updated: 2023/07/02 17:04:50 by bsengeze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,3 +53,4 @@ fclean:	clean
 re:	fclean all
 
 .PHONY: all clean fclean re
+
