@@ -26,8 +26,7 @@ typedef struct s_game {
 	t_img			*img;
 	mlx_t			*mlx;
 }	t_game;
-
-
+ 
 
 int main(int ac, char **av);
 
@@ -39,6 +38,9 @@ void empty_map(char *map);
 void empty_lines(char *map);
 void wrong_content(char *map);
 void wrong_shape(char *map);
+void wrong_wall(char *map);
+void wall_check_horizontal(char *map);
+void wall_check_vertical(char *map);
 
 // initialization
 

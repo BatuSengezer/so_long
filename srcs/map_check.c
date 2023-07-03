@@ -6,6 +6,7 @@ void map_check(char *map_str)
     empty_lines(map_str);
     wrong_content(map_str);
     wrong_shape(map_str);
+    wrong_wall(map_str);
 }
 
 void empty_map(char *map)
@@ -81,34 +82,97 @@ void wrong_shape(char *map)
     }
 }
 
-
-// void wrong_shape(char *map)
+// void wrong_wall(char *map)
 // {
-//     size_t curr_line_len = 0;
-//     size_t i = 0;
-//     size_t len = 0;
-//     int first_line = 1; // Flag to track the first line
+//     size_t i;
+//     size_t width;
+//     size_t map_len;
 
-//     while (map[i])
+//     i = 0;
+//     width = 0;
+//     map_len = ft_strlen(map);
+//     while (map[i] != '\0')
 //     {
-//         printf("line len, len, i: %zu,  %zu, %zu\n", curr_line_len, len, i);
-//         while (map[i % len] != '\n')
+//         while (map[i] != '\n' && map[i] != '\0')
 //         {
+//             if (map[i] != '1')
+//                 write_error("Wrong wall content");
 //             i++;
-//             curr_line_len++;
+//             width++;
 //         }
-//         printf("line len, len, i: %zu,  %zu, %zu\n", curr_line_len, len, i);
-//         if (first_line)
-//         {
-//             len = curr_line_len;
-//             first_line = 0;
-//         }
-//         else if (curr_line_len != len)
-//         {
-//             printf("ERROR line len, len, i: %zu,  %zu, %zu\n", curr_line_len, len, i);
-//             write_error("Wrong map shape!");
-//         }
-//         curr_line_len = 0;
 //         i++;
+//         while (i < map_len - width)
+//         {
+//             if (map[i] != '1' || map[i + width -1] != '1')
+//                 write_error("Wrong wall content");
+//             i = i + width + 1;
+//         }
+//         while (map[i] != '\0')
+//         {
+//             if (map[i] != '1')
+//                 write_error("Wrong wall content");
+//             i++;
+//         }
 //     }
 // }
+
+void wrong_wall(char *map)
+{
+    wall_check_horizontal(map);
+    wall_check_vertical(map);
+}
+
+void wall_check_horizontal(char *map)
+{
+    size_t i;
+    size_t width;
+    size_t map_len;
+
+    i = 0;
+    width = 0;
+    map_len = ft_strlen(map);
+    while (map[i] != '\0')
+    {
+        while (map[i] != '\n' && map[i] != '\0')
+        {
+            if (map[i] != '1')
+                write_error("Wrong wall content");
+            i++;
+            width++;
+        }
+        i = map_len - width;
+        while (map[i] != '\0')
+        {
+            if (map[i] != '1')
+                write_error("Wrong wall content");
+            i++;
+        }
+    }
+}
+
+void wall_check_vertical(char *map)
+{
+    size_t i;
+    size_t width;
+    size_t map_len;
+
+    i = 0;
+    width = 0;
+    map_len = ft_strlen(map);
+    while (map[i] != '\0')
+    {
+        while (map[i] != '\n')
+        {
+            i++;
+            width++;
+        }
+        i++;
+        while (i < map_len - width -1)
+        {
+            if (map[i] != '1' || map[i + width -1] != '1')
+                write_error("Wrong wall content");
+            i = i + width + 1;
+        }
+        i = i + width;
+    }
+}

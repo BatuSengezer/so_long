@@ -32,6 +32,6 @@ t_game *init_struct(char **map_grid)
 	game->player_y = get_position(game, 'y', 'P');
     game->exit_x = get_position(game, 'x', 'E');
 	game->exit_y = get_position(game, 'y', 'E');
-
+    // load_player_textures(game);
     return (game);
 }
