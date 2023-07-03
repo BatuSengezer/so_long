@@ -57,31 +57,25 @@ void wrong_content(char *map)
 
 void wrong_shape(char *map)
 {
-    size_t line_len;
+    size_t curr_line_len;
     size_t i;
     size_t len;
 
-    line_len = 0;
+    curr_line_len = 0;
     i = 0;
     len = 0;
-    printf("strlen = %zu\n", ft_strlen(map));
-    while (map[i] )
+    while (map[i] != '\0')
     {
-        printf("line len, len, i: %zu,  %zu, %zu\n", line_len, len, i);
-        while(map[i] != '\n')
+        while(map[i] != '\n' && map[i] != '\0')
         {
             i++;
-            line_len++;
+            curr_line_len++;
         }
-        printf("line len, len, i: %zu,  %zu, %zu\n", line_len, len, i);
         if (len == 0)
-            len = line_len;
-        else if (line_len != len)
-        {
-            printf("ERROR line len, len, i, map[i]: %zu,  %zu, %zu, %d\n", line_len, len, i, map[i]);
+            len = curr_line_len;
+        else if (curr_line_len != len)
 		    write_error("Wrong map shape!");
-        }
-        line_len = 0;
+        curr_line_len = 0;
         if (map[i] == '\n')
             i++;
     }
@@ -90,31 +84,31 @@ void wrong_shape(char *map)
 
 // void wrong_shape(char *map)
 // {
-//     size_t line_len = 0;
+//     size_t curr_line_len = 0;
 //     size_t i = 0;
 //     size_t len = 0;
 //     int first_line = 1; // Flag to track the first line
 
 //     while (map[i])
 //     {
-//         printf("line len, len, i: %zu,  %zu, %zu\n", line_len, len, i);
+//         printf("line len, len, i: %zu,  %zu, %zu\n", curr_line_len, len, i);
 //         while (map[i % len] != '\n')
 //         {
 //             i++;
-//             line_len++;
+//             curr_line_len++;
 //         }
-//         printf("line len, len, i: %zu,  %zu, %zu\n", line_len, len, i);
+//         printf("line len, len, i: %zu,  %zu, %zu\n", curr_line_len, len, i);
 //         if (first_line)
 //         {
-//             len = line_len;
+//             len = curr_line_len;
 //             first_line = 0;
 //         }
-//         else if (line_len != len)
+//         else if (curr_line_len != len)
 //         {
-//             printf("ERROR line len, len, i: %zu,  %zu, %zu\n", line_len, len, i);
+//             printf("ERROR line len, len, i: %zu,  %zu, %zu\n", curr_line_len, len, i);
 //             write_error("Wrong map shape!");
 //         }
-//         line_len = 0;
+//         curr_line_len = 0;
 //         i++;
 //     }
 // }
