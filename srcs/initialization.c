@@ -11,7 +11,8 @@ t_game	*game_init(char *map)
     map_check(map_str);
     map_arr = ft_split(map_str, '\n');
     game = init_struct(map_arr);
-
+    // flood_fill(game);
+    free(map_str);
     return (game);
 }
 

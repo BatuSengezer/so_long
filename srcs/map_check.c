@@ -1,5 +1,6 @@
 # include "../includes/so_long.h"
 
+// checks map for errors
 void map_check(char *map_str)
 {
     empty_map(map_str);
