@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 18:37:31 by bsengeze          #+#    #+#             */
-/*   Updated: 2022/12/24 17:14:10 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/02 21:44:43 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_numlen(int n)
@@ -28,6 +29,9 @@ static int	ft_numlen(int n)
 	return (i);
 }
 
+// Allocates (with malloc(3)) and returns a string
+// representing the integer received as an argument.
+// Negative numbers must be handled.
 char	*ft_itoa(int n)
 {
 	char	*ret;

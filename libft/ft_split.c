@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 16:50:12 by bsengeze          #+#    #+#             */
-/*   Updated: 2022/12/22 18:36:12 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/02 21:09:08 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ static int	ft_substrcnt(const char *s, char c)
 	return (i);
 }
 
+// Allocates (with malloc(3)) and returns an array
+// of strings obtained by splitting ’s’ using the
+// character ’c’ as a delimiter. The array must end
+// with a NULL pointer.
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;

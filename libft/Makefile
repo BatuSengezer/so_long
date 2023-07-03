@@ -6,7 +6,7 @@
 #    By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 16:30:24 by bsengeze          #+#    #+#              #
-#    Updated: 2023/07/02 17:04:50 by bsengeze         ###   ########.fr        #
+#    Updated: 2023/07/02 22:14:20 by bsengeze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS = 	ft_isalpha.c ft_isdigit.c ft_issign.c ft_isalnum.c ft_isascii.c \
 		ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 		ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-		ft_putnbr_fd.c ft_putchar.c ft_putstr.c
+		ft_putnbr_fd.c ft_putchar.c ft_putstr.c \
+		get_next_line.c get_next_line_utils.c
 
 OBJ	= $(SRCS:.c=.o)
 OBJS = $(addprefix $(OBJ_DIR), $(OBJ))

@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 17:40:09 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/02 21:09:54 by bsengeze         ###   ########.fr       */
+/*   Created: 2023/03/27 16:37:39 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/02 22:12:19 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-// Applies the function ’f’ on each character of
-// the string passed as argument, passing its index
-// as first argument. Each character is passed by
-// address to ’f’ to be modified if necessary.
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	unsigned int	i;
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
-}
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+char	*get_next_line(int fd);
+char	*ft_update_remaining(char *rem_txt);
+size_t	gnl_strlen(char *s);
+char	*gnl_strchr(char *s, int c);
+char	*gnl_strjoin(char *rem_txt, char *buffer);
+
+#endif
