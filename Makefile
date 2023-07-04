@@ -11,7 +11,7 @@ SRC_DIR = srcs/
 OBJ_DIR = objs/
 
 SRCS =	so_long.c utils.c initialization.c map_functions.c map_check.c \
-		
+		map_utils.c
 
 
 SRC	= $(addprefix $(SRC_DIR), $(SRCS))

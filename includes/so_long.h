@@ -41,6 +41,7 @@ void wrong_shape(char *map);
 void wrong_wall(char *map);
 void wall_check_horizontal(char *map);
 void wall_check_vertical(char *map);
+void check_file_extension(char *file_name_str);
 
 // initialization
 

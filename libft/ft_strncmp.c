@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <bsengeze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 19:33:15 by bsengeze          #+#    #+#             */
-/*   Updated: 2022/12/22 21:58:12 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/04 04:30:13 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// strncmp function lexicographically compare the null-terminated strings s1
+// and s2. The strncmp() function compares not more than n characters. Because
+// strncmp is designed forcomparing strings rather than binary data, characters
+// that appear after a ‘\0’ character are notcompared.
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

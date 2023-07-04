@@ -14,8 +14,6 @@
 //     return (0);
 // }
 
-
-
 // test main
 int main(int ac, char **av)
 {   
@@ -29,6 +27,7 @@ int main(int ac, char **av)
     if (ac!= 2)
         write_error("Argument count should be 2!");
     // check map file extension
+    check_file_extension(av[1]);
     game = game_init(av[1]);
     printf("player_x: %zu\n", game->player_x);
     printf("player_y: %zu\n", game->player_y);

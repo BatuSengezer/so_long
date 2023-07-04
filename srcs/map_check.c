@@ -1,15 +1,5 @@
 # include "../includes/so_long.h"
 
-// checks map for errors
-void map_check(char *map_str)
-{
-    empty_map(map_str);
-    empty_lines(map_str);
-    wrong_content(map_str);
-    wrong_shape(map_str);
-    wrong_wall(map_str);
-}
-
 void empty_map(char *map)
 {
     if (!map[0])
