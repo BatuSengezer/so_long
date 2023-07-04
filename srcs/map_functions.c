@@ -72,14 +72,7 @@ size_t get_position(t_game *game, char axis, char obj)
 		x = 0;
 		while (x < game->width)
 		{
-			if (game->map_grid[y][x] == 'P' && obj == 'P')
-			{
-				if (axis == 'x')
-					return (x);
-				else
-					return (y);
-			}
-            if (game->map_grid[y][x] == 'E' && obj == 'E')
+			if (game->map_grid[y][x] == obj)
 			{
 				if (axis == 'x')
 					return (x);
