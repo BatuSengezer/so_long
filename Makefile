@@ -1,5 +1,4 @@
-# CC = gcc for mac
-CC = cc
+CC = cc 
 CFLAGS = -Wall -Wextra -Werror
 NAME	:= so_long
 LIBMLX	:= ./MLX42
@@ -11,7 +10,7 @@ SRC_DIR = srcs/
 OBJ_DIR = objs/
 
 SRCS =	so_long.c utils.c initialization.c map_functions.c map_check.c \
-		map_utils.c
+		map_utils.c flood_fill.c
 
 
 SRC	= $(addprefix $(SRC_DIR), $(SRCS))

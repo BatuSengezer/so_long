@@ -53,5 +53,8 @@ char *read_map(char *map);
 size_t count_rows(char **map_grid);
 size_t count_collectibles(t_game *game);
 size_t get_position(t_game *game, char axis, char obj);
+void flood_fill(t_game *game);
+int	path_check(t_game *tmp, size_t y, size_t x);
+void free_grid(char **grid, size_t grid_height);
 
 #endif
