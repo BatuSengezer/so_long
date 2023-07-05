@@ -1,4 +1,4 @@
-# include "../includes/so_long.h"
+# include "../include/so_long.h"
 
 // counts rows in the map
 size_t count_rows(char **map_grid)

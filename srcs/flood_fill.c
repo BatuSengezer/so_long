@@ -1,4 +1,4 @@
-# include "../includes/so_long.h"
+# include "../include/so_long.h"
 
 void flood_fill(t_game *game)
 {

@@ -1,4 +1,4 @@
-# include "../includes/so_long.h"
+# include "../include/so_long.h"
 
 // takes map as argument and initializes game
 t_game	*init_game(char *map)

@@ -1,4 +1,4 @@
-# include "../includes/so_long.h"
+# include "../include/so_long.h"
 
 t_img	*load_enemy_texture(mlx_t *mlx, t_img *img)
 {

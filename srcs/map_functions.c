@@ -1,4 +1,4 @@
-# include "../includes/so_long.h"
+# include "../include/so_long.h"
 
 // checks map for errors
 void map_check(char *map_str)
