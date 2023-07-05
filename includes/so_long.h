@@ -4,9 +4,22 @@
 # include "../MLX42/include/MLX42/MLX42.h"
 # include "../libft/libft.h"
 # include <fcntl.h>
+
+# define PIXELS 64
+
 typedef struct s_img {
-mlx_image_t			*tile;
-} t_img;
+	mlx_image_t			*bush;
+	mlx_image_t			*grass;
+	mlx_image_t			*collectible;
+	mlx_image_t			*player;
+	mlx_image_t			*exit_closed;
+	mlx_image_t			*exit_open;
+	mlx_image_t			*enemy;
+	mlx_image_t			*moves_print;
+	mlx_image_t			*moves_count;
+	mlx_image_t			*collectibles_count;
+	mlx_image_t			*collectible_2;
+}	t_img;
 
 typedef struct s_game {
 	char			**map_grid;
@@ -45,10 +58,12 @@ void check_file_extension(char *file_name_str);
 
 // initialization
 
-t_game	*game_init(char *map);
-t_game	*init_struct(char **map_grid);
+t_game	*init_game(char *map);
+t_game	*init_game_struct(char **map_grid);
+t_img	*init_img_struct(mlx_t *mlx);
 
 // map functions
+
 char *read_map(char *map);
 size_t count_rows(char **map_grid);
 size_t count_collectibles(t_game *game);
@@ -56,5 +71,16 @@ size_t get_position(t_game *game, char axis, char obj);
 void flood_fill(t_game *game);
 int	path_check(t_game *tmp, size_t y, size_t x);
 void free_grid(char **grid, size_t grid_height);
+
+// image functions
+t_img	*load_grass_texture(mlx_t *mlx, t_img *img);
+t_img	*load_bush_texture(mlx_t *mlx, t_img *img);
+t_img	*load_collectible_texture(mlx_t *mlx, t_img *img);
+t_img	*load_exit_closed(mlx_t *mlx, t_img	*img);
+t_img	*load_exit_open(mlx_t *mlx, t_img *img);
+t_img	*load_enemy_texture(mlx_t *mlx, t_img *img);
+t_img	*load_player_texture(mlx_t *mlx, t_img *img);
+void	fill_background(t_game *game);
+
 
 #endif
