@@ -1,39 +1,44 @@
+NAME = so_long
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
-NAME	:= so_long
-LIBMLX	:= ./MLX42
+# MLX42FLAGS = -lglfw3 -framework Cocoa -framework OpenGL -framework IOKit
+MLX42FLAGS = -framework Cocoa -framework OpenGL -framework IOKit
 LIBFT = ./libft/libft.a
+LIBMLX42 = ./MLX42/build/libmlx42.a
 INCLUDE = -I./include
-GREEN   := \033[32;1m
+GREEN   = \033[32;1m
 RESET	= \033[0m
+MLX42_DIR = ./MLX42
 SRC_DIR = srcs/
 OBJ_DIR = objs/
 
 SRCS =	so_long.c utils.c initialization.c map_functions.c map_check.c \
-		map_utils.c flood_fill.c
+		map_utils.c flood_fill.c load_images.c load_images2.c render.c \
+		
 
 
 SRC	= $(addprefix $(SRC_DIR), $(SRCS))
-OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
+OBJ = $(addprefix $(OBJ_DIR), $(notdir $(SRC:.c=.o)))
 
-all:	check_MLX42_dir	$(NAME)
+# all:	check_MLX42_dir	$(NAME) 
+all:	$(NAME)
 
-$(NAME): $(LIBFT) libmlx $(OBJ)
+$(NAME): $(LIBFT) libmlx $(LIBMLX42) $(OBJ)
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT) $(LIBMLX42) $(MLX42FLAGS)
 	@echo "$(GREEN) Compiled with $(CFLAGS)$(RESET)"
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
 
 $(LIBFT):
 	@$(MAKE) -C ./libft
 	@echo "$(GREEN) Libft compiled $(RESET)"
 
 libmlx:
-	@cd $(LIBMLX) && cmake -B build && cmake --build build -j4
+	@cd $(MLX42_DIR) && cmake -B build && cmake --build build -j4
 	@echo "$(GREEN) MLX42 built $(RESET)"
 
-check_MLX42_dir:
-	@if ! [ -d "$(LIBMLX)" ]; then \
-	git clone https://github.com/codam-coding-college/MLX42.git $(LIBMLX); \
-	fi
+# check_MLX42_dir:
+# 	@if ! [ -d "$(MLX42_DIR)" ]; then \
+# 	git clone https://github.com/codam-coding-college/MLX42.git $(MLX42_DIR); \
+# 	fi
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
@@ -41,13 +46,13 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 
 clean: 
 	@$(MAKE) clean -C ./libft
-	@echo "$(GREEN) Cleaned $(RESET)"
 	@rm -rf $(OBJ_DIR)
+	@echo "$(GREEN) Cleaned $(RESET)"
 
 fclean: clean
 	@$(MAKE) fclean -C ./libft
-	@echo "$(GREEN) Full cleaned $(RESET)"
 	@rm -f $(NAME)
+	@echo "$(GREEN) Full cleaned $(RESET)"
 
 re:	fclean all
 
