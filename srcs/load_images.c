@@ -5,7 +5,7 @@ t_img	*load_grass_texture(mlx_t *mlx, t_img *img)
 {
 	mlx_texture_t	*grass;
 
-	grass = mlx_load_png("./sprites/grass.png");
+	grass = mlx_load_png("./sprites/Grass.png");
 	if (!grass)
 		write_error("Error while loading png");
 	img->grass = mlx_texture_to_image(mlx, grass);
@@ -33,7 +33,7 @@ t_img	*load_collectible_texture(mlx_t *mlx, t_img *img)
 {
 	mlx_texture_t	*collectible;
 
-	collectible = mlx_load_png("./sprites/collectible.png");
+	collectible = mlx_load_png("./sprites/Collectible.png");
 	if (!collectible)
 		write_error("Error while loading png");
 	img->collectible = mlx_texture_to_image(mlx, collectible);

@@ -20,3 +20,11 @@ void	fill_background(t_game *game)
 		y++;
 	}
 }
+
+void select_image(t_game *game, size_t y, size_t x)
+{
+	size_t img_size;
+	
+	if (game->map_grid[y][x] == '1')
+		
+}
