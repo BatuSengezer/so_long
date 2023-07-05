@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 MLX42FLAGS = -framework Cocoa -framework OpenGL -framework IOKit
 LIBFT = ./libft/libft.a
 LIBMLX42 = ./MLX42/build/libmlx42.a
-INCLUDE = -I./include
+INCLUDES = -I./include -I./MLX42/include
 GREEN   = \033[32;1m
 RESET	= \033[0m
 MLX42_DIR = ./MLX42
@@ -42,7 +42,7 @@ libmlx:
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $^
+	@$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $^
 
 clean: 
 	@$(MAKE) clean -C ./libft

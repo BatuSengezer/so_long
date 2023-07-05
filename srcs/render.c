@@ -14,7 +14,7 @@ void	fill_background(t_game *game)
 		{
 			if (mlx_image_to_window(game->mlx, game->img->grass,
 					x * PIXELS, y * PIXELS) < 0)
-				error_message("Failed to put image to window");
+				write_error("Failed to put image to window");
 			x++;
 		}
 		y++;
