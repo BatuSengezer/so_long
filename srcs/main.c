@@ -38,6 +38,8 @@ int main(int ac, char **av)
 	images = init_img_struct(game->mlx);
     game->img = images;
 	fill_background(game);
+    render_map(game);
+	mlx_key_hook(game->mlx, move_hook, game);
 
 
     printf("player_x: %zu\n", game->player_x);
