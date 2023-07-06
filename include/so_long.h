@@ -5,6 +5,7 @@
 # include "../libft/libft.h"
 # include <fcntl.h>
 
+
 # define PIXELS 64
 
 typedef struct s_img {
@@ -80,7 +81,22 @@ t_img	*load_exit_closed(mlx_t *mlx, t_img	*img);
 t_img	*load_exit_open(mlx_t *mlx, t_img *img);
 t_img	*load_enemy_texture(mlx_t *mlx, t_img *img);
 t_img	*load_player_texture(mlx_t *mlx, t_img *img);
+void	load_player_textures(t_game *game);
 void	fill_background(t_game *game);
+void	select_image(t_game *game, size_t y, size_t x);
+void	render_map(t_game *game);
+void	load_player(t_game *game, char dir);
+
+// move functions
+void	move_hook(mlx_key_data_t keydata, void *game);
+void	move_player(t_game *game, char axis, char dir);
+void	move_select(t_game *game, char axis, char dir);
+t_game	*move_up(t_game *game);
+t_game	*move_down(t_game *game);
+t_game	*move_left(t_game *game);
+t_game	*move_right(t_game *game);
+
+
 
 
 #endif
