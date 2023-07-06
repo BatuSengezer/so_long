@@ -13,9 +13,9 @@ MLX42_DIR = ./MLX42
 SRC_DIR = srcs/
 OBJ_DIR = objs/
 
-SRCS =	so_long.c utils.c initialization.c map_functions.c map_check.c \
+SRCS =	main.c utils.c initialization.c map_functions.c map_check.c \
 		map_utils.c flood_fill.c load_images.c load_images2.c render.c \
-		
+		move_functions.c move_functions2.c 
 
 SRC	= $(addprefix $(SRC_DIR), $(SRCS))
 OBJ = $(addprefix $(OBJ_DIR), $(notdir $(SRC:.c=.o)))
