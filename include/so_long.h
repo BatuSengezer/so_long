@@ -5,7 +5,6 @@
 # include "../libft/libft.h"
 # include <fcntl.h>
 
-
 # define PIXELS 64
 
 typedef struct s_img {

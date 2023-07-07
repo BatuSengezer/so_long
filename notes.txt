@@ -5,6 +5,7 @@ if (mlx_image_to_window(data->mlx, data->img->rupee,
 				x * PIXELS + img_size / 2, y * PIXELS + img_size / 2) < 0)
 			error_message("Failed to put image to window");
 
+3) check resizing
 
 4) why we dont free textures here
 void	load_player_textures(t_game *game)
