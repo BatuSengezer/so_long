@@ -16,10 +16,9 @@ typedef struct s_img {
 	mlx_image_t			*exit_closed;
 	mlx_image_t			*exit_open;
 	mlx_image_t			*enemy;
-	mlx_image_t			*moves_print;
-	mlx_image_t			*moves_count;
+	mlx_image_t			*print_moves;
+	mlx_image_t			*count_moves;
 	mlx_image_t			*collectibles_count;
-	mlx_image_t			*collectible_2;
 }	t_img;
 
 typedef struct s_game {
@@ -41,6 +40,14 @@ typedef struct s_game {
 	mlx_t			*mlx;
 }	t_game;
  
+ typedef struct s_var {
+	int				ran_x;
+	int				ran_y;
+	int				*x;
+	int				*y;
+	int				index_x;
+	int				index_y;
+}	t_tmp;
 
 int main(int ac, char **av);
 
@@ -85,18 +92,23 @@ void	load_player_textures(t_game *game);
 void	fill_background(t_game *game);
 void	select_image(t_game *game, size_t y, size_t x);
 void	render_map(t_game *game);
-void	load_player(t_game *game, char dir);
+// void	load_player(t_game *game, char dir);
+void	screen_str(t_game *game);
+void	print_moves(t_game *game);
+void	print_collectibles(t_game *game);
 
 // move functions
-void	move_hook(mlx_key_data_t keydata, void *game);
-void	move_player(t_game *game, char axis, char dir);
-void	move_select(t_game *game, char axis, char dir);
+
+void	move_hook(mlx_key_data_t keydata, void *tmp);
+void	move_player(t_game *game, char dir);
 t_game	*move_up(t_game *game);
 t_game	*move_down(t_game *game);
 t_game	*move_left(t_game *game);
 t_game	*move_right(t_game *game);
-
-
-
+void	pick_collectibles(t_game *game, int y, int x);
+void	win_check(t_game *game);
+void	enemy_hook(void *tmp);
+void	move_enemies(const t_game *game, int count);
+void	kill_check(const t_game *game);
 
 #endif
