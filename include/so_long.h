@@ -91,7 +91,7 @@ void	load_player_textures(t_game *game);
 void	fill_background(t_game *game);
 void	select_image(t_game *game, size_t y, size_t x);
 void	render_map(t_game *game);
-// void	load_player(t_game *game, char dir);
+void	load_player(t_game *game, char dir);
 void	screen_str(t_game *game);
 void	print_moves(t_game *game);
 void	print_collectibles(t_game *game);
