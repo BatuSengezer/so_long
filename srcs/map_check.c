@@ -32,7 +32,7 @@ void wrong_content(char *map)
 	i = 0;
     while (map[i])
     {
-        if (!(ft_strchr("PEC01\n", map[i])))
+        if (!(ft_strchr("PECX01\n", map[i])))
 		    write_error("Invalid characters in map!");
 
         if (map[i] == 'P')
@@ -127,7 +127,7 @@ void wall_check_horizontal(char *map)
         while (map[i] != '\n' && map[i] != '\0')
         {
             if (map[i] != '1')
-                write_error("Wrong wall content");
+                write_error("Wrong wall content!");
             i++;
             width++;
         }
@@ -135,7 +135,7 @@ void wall_check_horizontal(char *map)
         while (map[i] != '\0')
         {
             if (map[i] != '1')
-                write_error("Wrong wall content");
+                write_error("Wrong wall content!");
             i++;
         }
     }
@@ -161,7 +161,7 @@ void wall_check_vertical(char *map)
         while (i < map_len - width -1)
         {
             if (map[i] != '1' || map[i + width -1] != '1')
-                write_error("Wrong wall content");
+                write_error("Wrong wall content!");
             i = i + width + 1;
         }
         i = i + width;

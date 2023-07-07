@@ -7,8 +7,8 @@ t_game	*move_up(t_game *game)
 	{
 		if (game->map_grid[game->player_y - 1][game->player_x] == 'C')
 		{
-			remove_collectibles(game, game->player_y - 1, game->player_x);
-			print_collectibless(game);
+			pick_collectibles(game, game->player_y - 1, game->player_x);
+			print_collectibles(game);
 			game->map_grid[game->player_y - 1][game->player_x] = '0';
 			game->collected += 1;
 		}
@@ -16,7 +16,7 @@ t_game	*move_up(t_game *game)
 		game->img->player->instances[0].y -= 1 * PIXELS;
 		game->steps += 1;
 	}
-	check_game_status(game);
+	win_check(game);
 	return (game);
 }
 
@@ -27,8 +27,8 @@ t_game	*move_down(t_game *game)
 	{
 		if (game->map_grid[game->player_y + 1][game->player_x] == 'C')
 		{
-			remove_collectibles(game, game->player_y + 1, game->player_x);
-			print_collectibless(game);
+			pick_collectibles(game, game->player_y + 1, game->player_x);
+			print_collectibles(game);
 			game->map_grid[game->player_y + 1][game->player_x] = '0';
 			game->collected += 1;
 		}
@@ -36,7 +36,7 @@ t_game	*move_down(t_game *game)
 		game->img->player->instances[0].y += 1 * PIXELS;
 		game->steps += 1;
 	}
-	check_game_status(game);
+	win_check(game);
 	return (game);
 }
 
@@ -47,8 +47,8 @@ t_game	*move_right(t_game *game)
 	{
 		if (game->map_grid[game->player_y][game->player_x + 1] == 'C')
 		{
-			remove_collectibles(game, game->player_y, game->player_x + 1);
-			print_collectibless(game);
+			pick_collectibles(game, game->player_y, game->player_x + 1);
+			print_collectibles(game);
 			game->map_grid[game->player_y][game->player_x + 1] = '0';
 			game->collected += 1;
 		}
@@ -56,7 +56,7 @@ t_game	*move_right(t_game *game)
 		game->img->player->instances[0].x += 1 * PIXELS;
 		game->steps += 1;
 	}
-	check_game_status(game);
+	win_check(game);
 	return (game);
 }
 
@@ -67,8 +67,8 @@ t_game	*move_left(t_game *game)
 	{
 		if (game->map_grid[game->player_y][game->player_x - 1] == 'C')
 		{
-			remove_collectibles(game, game->player_y, game->player_x - 1);
-			print_collectibless(game);
+			pick_collectibles(game, game->player_y, game->player_x - 1);
+			print_collectibles(game);
 			game->map_grid[game->player_y][game->player_x - 1] = '0';
 			game->collected += 1;
 		}
@@ -76,24 +76,24 @@ t_game	*move_left(t_game *game)
 		game->img->player->instances[0].x -= 1 * PIXELS;
 		game->steps += 1;
 	}
-	check_game_status(game);
+	win_check(game);
 	return (game);
 }
 
-void	remove_collectibles(t_game *game, int y, int x)
+void	win_check(t_game *game)
 {
-	int	collectible_i;
-
-	collectible_i = 0;
-	x = x * 64 + 16;
-	y = y * 64 + 16;
-	while (collectible_i < game->img->collectible->count)
+	print_moves(game);
+	if (game->collected == game->collectibles)
 	{
-		if (game->img->collectible->instances[collectible_i].x == x
-			&& game->img->collectible->instances[collectible_i].y == y)
+		if (mlx_image_to_window(game->mlx, game->img->exit_open,
+				game->exit_x * PIXELS, game->exit_y * PIXELS) < 0)
+			write_error("Error during img to window!");
+		game->map_grid[game->exit_y][game->exit_x] = '0';
+		if (game->player_x == game->exit_x && game->player_y == game->exit_y)
 		{
-			game->img->collectible->instances[collectible_i].enabled = FALSE;
+			sleep(1);
+			mlx_close_window(game->mlx);
+			ft_putendl_fd("Congratulations, you won!",1);
 		}
-		collectible_i++;
 	}
 }

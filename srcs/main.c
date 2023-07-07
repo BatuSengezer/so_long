@@ -1,31 +1,9 @@
 # include "../include/so_long.h"
 
-// int main(int ac, char **av)
-// {   
-//      t_game  *game;
-//     //t_img   *images;
-//     // remove that later
-//     if (av == 0)
-//         return (0);
-//     //
-//     if (ac!= 2)
-//         write_error("Argument count should be 2!");
-//     check_file_extension(av[1]);
-//     game = game_init(av[1]);
-    
-
-//     return (0);
-// }
-
-// test main
 int main(int ac, char **av)
 {   
     t_game  *game;
     t_img   *images;
-    // remove that later
-    if (av == 0)
-        return (0);
-    //
 
     if (ac!= 2)
         write_error("Argument count should be 2!");
@@ -39,12 +17,10 @@ int main(int ac, char **av)
     game->img = images;
 	fill_background(game);
     render_map(game);
+    screen_str(game);
 	mlx_key_hook(game->mlx, move_hook, game);
-
-
-    printf("player_x: %zu\n", game->player_x);
-    printf("player_y: %zu\n", game->player_y);
-	printf("exit_x: %zu\n", game->exit_x);
-    printf("exit_y: %zu\n", game->exit_y);
+	mlx_loop_hook(game->mlx, enemy_hook, game);
+	mlx_loop(game->mlx);
+	mlx_terminate(game->mlx);
     return (0);
 }
