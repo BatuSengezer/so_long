@@ -10,11 +10,12 @@ int main(int ac, char **av)
     check_file_extension(av[1]);
     game = init_game(av[1]);
     game->mlx = mlx_init(game->width * PIXELS,
-			game->height * PIXELS, "so_long", false);
+			game->height * PIXELS, "so_long", true);
     if (!game->mlx)
 		return (EXIT_FAILURE);
 	images = init_img_struct(game->mlx);
     game->img = images;
+	mlx_set_setting(MLX_STRETCH_IMAGE, true);
 	fill_background(game);
     render_map(game);
     screen_str(game);
