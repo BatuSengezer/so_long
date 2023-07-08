@@ -1,4 +1,16 @@
-# include "../include/so_long.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   load_images2.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 16:41:29 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/08 16:42:15 by bsengeze         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/so_long.h"
 
 t_img	*load_enemy_texture(mlx_t *mlx, t_img *img)
 {
@@ -28,45 +40,44 @@ t_img	*load_player_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-void	load_player_textures(t_game *game)
-{
-	game->player_up = mlx_load_png("./sprites/Player_Up.png");
-	if (!game->player_up)
-		write_error("Error while loading png");
-	game->player_down = mlx_load_png("./sprites/Player_Down.png");
-	if (!game->player_down)
-		write_error("Error while loading png");
-	game->player_left = mlx_load_png("./sprites/Player_Left.png");
-	if (!game->player_left)
-		write_error("Error while loading png");
-	game->player_right = mlx_load_png("./sprites/Player_Right.png");
-	if (!game->player_right)
-		write_error("Error while loading png");
-}
+// void	load_player_textures(t_game *game)
+// {
+// 	game->player_up = mlx_load_png("./sprites/Player_Up.png");
+// 	if (!game->player_up)
+// 		write_error("Error while loading png");
+// 	game->player_down = mlx_load_png("./sprites/Player_Down.png");
+// 	if (!game->player_down)
+// 		write_error("Error while loading png");
+// 	game->player_left = mlx_load_png("./sprites/Player_Left.png");
+// 	if (!game->player_left)
+// 		write_error("Error while loading png");
+// 	game->player_right = mlx_load_png("./sprites/Player_Right.png");
+// 	if (!game->player_right)
+// 		write_error("Error while loading png");
+// }
 
-void	load_player(t_game *game, char dir)
-{
+// void	load_player(t_game *game, char dir)
+// {
+// 	if (dir == 'u')
+// 	{
+// 		mlx_delete_image(game->mlx, game->img->player);
+// 		game->img->player = mlx_texture_to_image(game->mlx, game->player_up);
+// 		if (mlx_image_to_window(game->mlx, game->img->player, game->player_x * PIXELS, game->player_y * PIXELS) < 0)
+// 			write_error("Error during img to window!"); 
+// 	}
+// 	if (dir == 'd')
+// 		game->img->player = mlx_texture_to_image(game->mlx, game->player_down);
+// 	if (dir == 'r')
+// 		game->img->player = mlx_texture_to_image(game->mlx, game->player_right);
+// 	if (dir == 'l')
+// 		game->img->player = mlx_texture_to_image(game->mlx, game->player_left);
 
-	if (dir == 'u')
-	{
-		mlx_delete_image(game->mlx, game->img->player);
-		game->img->player = mlx_texture_to_image(game->mlx, game->player_up);
-		if (mlx_image_to_window(game->mlx, game->img->player, game->player_x * PIXELS, game->player_y * PIXELS) < 0)
-			write_error("Error during img to window!"); 
-	}
-	if (dir == 'd')
-		game->img->player = mlx_texture_to_image(game->mlx, game->player_down);
-	if (dir == 'r')
-		game->img->player = mlx_texture_to_image(game->mlx, game->player_right);
-	if (dir == 'l')
-		game->img->player = mlx_texture_to_image(game->mlx, game->player_left);
-
-	// if (dir == 'u')
-	// 	mlx_draw_texture(game->img->player, game->player_up, 0, 0);
-	// if (dir == 'd')
-	// 	mlx_draw_texture(game->img->player, game->player_down, 0, 0);
-	// if (dir == 'r')
-	// 	mlx_draw_texture(game->img->player, game->player_right, 0, 0);
-	// if (dir == 'l')
-	// 	mlx_draw_texture(game->img->player, game->player_left, 0, 0);
-}
+// 	// if (dir == 'u')
+// 	// 	mlx_draw_texture(game->img->player, game->player_up, 0, 0);
+// 	// if (dir == 'd')
+// 	// 	mlx_draw_texture(game->img->player, game->player_down, 0, 0);
+// 	// if (dir == 'r')
+// 	// 	mlx_draw_texture(game->img->player, game->player_right, 0, 0);
+// 	// if (dir == 'l')
+// 	// 	mlx_draw_texture(game->img->player, game->player_left, 0, 0);
+// }

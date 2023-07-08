@@ -1,5 +1,18 @@
-# include "../include/so_long.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_functions.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 17:28:08 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/08 17:28:36 by bsengeze         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "../include/so_long.h"
+
+// function that processes keyboard input into game
 void	move_hook(mlx_key_data_t keydata, void *tmp)
 {
 	t_game	*game;
@@ -10,7 +23,7 @@ void	move_hook(mlx_key_data_t keydata, void *tmp)
 	if (keydata.key == MLX_KEY_W && keydata.action == MLX_PRESS)
 		move_player(game, 'w');
 	if (keydata.key == MLX_KEY_S && keydata.action == MLX_PRESS)
-		move_player(game,'s');
+		move_player(game, 's');
 	if (keydata.key == MLX_KEY_D && keydata.action == MLX_PRESS)
 		move_player(game, 'd');
 	if (keydata.key == MLX_KEY_A && keydata.action == MLX_PRESS)

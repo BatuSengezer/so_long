@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/08 17:48:08 by bsengeze         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -38,8 +50,8 @@ typedef struct s_game {
 	t_img			*img;
 	mlx_t			*mlx;
 }	t_game;
- 
- typedef struct s_var {
+
+typedef struct s_var {
 	int				ran_x;
 	int				ran_y;
 	int				*x;
@@ -48,20 +60,20 @@ typedef struct s_game {
 	int				index_y;
 }	t_tmp;
 
-int main(int ac, char **av);
+int		main(int ac, char **av);
 
 // error functions
 
-void write_error(char *str);
-void map_check(char *map_str);
-void empty_map(char *map);
-void empty_lines(char *map);
-void wrong_content(char *map);
-void wrong_shape(char *map);
-void wrong_wall(char *map);
-void wall_check_horizontal(char *map);
-void wall_check_vertical(char *map);
-void check_file_extension(char *file_name_str);
+void	write_error(char *str);
+void	map_check(char *map_str);
+void	empty_map(char *map);
+void	empty_lines(char *map);
+void	wrong_content(char *map);
+void	wrong_shape(char *map);
+void	wrong_wall(char *map);
+void	wall_check_horizontal(char *map);
+void	wall_check_vertical(char *map);
+void	check_file_extension(char *file_name_str);
 
 // initialization
 
@@ -71,13 +83,13 @@ t_img	*init_img_struct(mlx_t *mlx);
 
 // map functions
 
-char *read_map(char *map);
-size_t count_rows(char **map_grid);
-size_t count_collectibles(t_game *game);
-size_t get_position(t_game *game, char axis, char obj);
-void flood_fill(t_game *game);
-int	path_check(t_game *tmp, size_t y, size_t x);
-void free_grid(char **grid, size_t grid_height);
+char	*read_map(char *map);
+size_t	count_rows(char **map_grid);
+size_t	count_collectibles(t_game *game);
+size_t	get_position(t_game *game, char axis, char obj);
+void	flood_fill(t_game *game);
+int		path_check(t_game *tmp, size_t y, size_t x);
+void	free_grid(char **grid, size_t grid_height);
 
 // image functions
 t_img	*load_grass_texture(mlx_t *mlx, t_img *img);
@@ -87,11 +99,11 @@ t_img	*load_exit_closed(mlx_t *mlx, t_img	*img);
 t_img	*load_exit_open(mlx_t *mlx, t_img *img);
 t_img	*load_enemy_texture(mlx_t *mlx, t_img *img);
 t_img	*load_player_texture(mlx_t *mlx, t_img *img);
-void	load_player_textures(t_game *game);
 void	fill_background(t_game *game);
 void	select_image(t_game *game, size_t y, size_t x);
 void	render_map(t_game *game);
-// void	load_player(t_game *game, char dir);
+// void	load_player_textures(t_game *game);
+// void		load_player(t_game *game, char dir);
 void	screen_str(t_game *game);
 void	print_moves(t_game *game);
 void	print_collectibles(t_game *game);

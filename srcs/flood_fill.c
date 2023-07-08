@@ -1,9 +1,22 @@
-# include "../include/so_long.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   flood_fill.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 17:22:36 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/08 17:23:15 by bsengeze         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void flood_fill(t_game *game)
+#include "../include/so_long.h"
+
+// flood fill algorithm to check valid path on the map 
+void	flood_fill(t_game *game)
 {
-    t_game tmp;
-	size_t i;
+	t_game	tmp;
+	size_t	i;
 
 	tmp.height = game->height;
 	tmp.width = game->width;
@@ -26,6 +39,7 @@ void flood_fill(t_game *game)
 	free_grid(tmp.map_grid, tmp.height);
 }
 
+// checks if there is a valid path to the exit
 int	path_check(t_game *tmp, size_t y, size_t x)
 {
 	if (tmp->map_grid[y][x] == '1')
@@ -49,9 +63,10 @@ int	path_check(t_game *tmp, size_t y, size_t x)
 	return (0);
 }
 
-void free_grid(char **grid, size_t grid_height)
+// frees the grid of a given height
+void	free_grid(char **grid, size_t grid_height)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < grid_height)

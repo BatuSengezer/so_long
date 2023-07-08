@@ -1,4 +1,16 @@
-# include "../include/so_long.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_functions2.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 17:17:29 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/08 17:18:16 by bsengeze         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/so_long.h"
 
 t_game	*move_up(t_game *game)
 {
@@ -93,7 +105,7 @@ void	win_check(t_game *game)
 		{
 			sleep(1);
 			mlx_close_window(game->mlx);
-			ft_putendl_fd("Congratulations, you won!",1);
+			ft_putendl_fd("Congratulations, you won!", 1);
 		}
 	}
 }
