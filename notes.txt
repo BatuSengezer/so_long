@@ -1,4 +1,5 @@
-		
+1) update makefile
+	
 2)why x * PIXELS + img_size / 2, y * PIXELS + img_size / 2 in the follwoing code
 if (mlx_image_to_window(data->mlx, data->img->rupee,
 				x * PIXELS + img_size / 2, y * PIXELS + img_size / 2) < 0)
