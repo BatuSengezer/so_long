@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   initialization.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:34:10 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:35:50 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/09 22:57:16 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,22 @@ t_game	*init_game(char *map)
 	char	*map_str;
 	char	**map_arr;
 	t_game	*game;
-	size_t	i;
+	// size_t	i;
 
-	i = 0;
+	// i = 0;
 	map_str = read_map(map);
 	map_check(map_str);
 	map_arr = ft_split(map_str, '\n');
 	game = init_game_struct(map_arr);
 	flood_fill(game);
 	free(map_str);
-	while (map_arr[i])
-		free(map_arr[i++]);
-	free(map_arr);
+	// free array causes memory leaks
+	// while (map_arr[i])
+	// {
+	// 	free(map_arr[i]);
+	// 	i++;
+	// }
+	// free(map_arr);
 	return (game);
 }
 
@@ -40,7 +44,7 @@ t_game	*init_game_struct(char **map_grid)
 
 	game = (t_game *)ft_calloc(1, sizeof(t_game));
 	if (!game)
-		write_error("Memory allocation problem!");
+		write_error("Memory allocation error!");
 	game->width = ft_strlen(map_grid[0]);
 	game->height = count_rows(map_grid);
 	game->map_grid = map_grid;
@@ -50,7 +54,7 @@ t_game	*init_game_struct(char **map_grid)
 	game->player_y = get_position(game, 'y', 'P');
 	game->exit_x = get_position(game, 'x', 'E');
 	game->exit_y = get_position(game, 'y', 'E');
-	// load_player_textures(game);
+	load_player_textures(game);
 	return (game);
 }
 

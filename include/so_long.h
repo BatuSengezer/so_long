@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:48:08 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/09 22:45:15 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ t_img	*load_player_texture(mlx_t *mlx, t_img *img);
 void	fill_background(t_game *game);
 void	select_image(t_game *game, size_t y, size_t x);
 void	render_map(t_game *game);
-// void	load_player_textures(t_game *game);
+void	load_player_textures(t_game *game);
 // void		load_player(t_game *game, char dir);
 void	screen_str(t_game *game);
 void	print_moves(t_game *game);

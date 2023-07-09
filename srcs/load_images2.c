@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   load_images2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 16:41:29 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 16:42:15 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/09 22:45:47 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,21 @@ t_img	*load_player_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-// void	load_player_textures(t_game *game)
-// {
-// 	game->player_up = mlx_load_png("./sprites/Player_Up.png");
-// 	if (!game->player_up)
-// 		write_error("Error while loading png");
-// 	game->player_down = mlx_load_png("./sprites/Player_Down.png");
-// 	if (!game->player_down)
-// 		write_error("Error while loading png");
-// 	game->player_left = mlx_load_png("./sprites/Player_Left.png");
-// 	if (!game->player_left)
-// 		write_error("Error while loading png");
-// 	game->player_right = mlx_load_png("./sprites/Player_Right.png");
-// 	if (!game->player_right)
-// 		write_error("Error while loading png");
-// }
+void	load_player_textures(t_game *game)
+{
+	game->player_up = mlx_load_png("./sprites/Player_Up.png");
+	if (!game->player_up)
+		write_error("Error while loading png");
+	game->player_down = mlx_load_png("./sprites/Player_Down.png");
+	if (!game->player_down)
+		write_error("Error while loading png");
+	game->player_left = mlx_load_png("./sprites/Player_Left.png");
+	if (!game->player_left)
+		write_error("Error while loading png");
+	game->player_right = mlx_load_png("./sprites/Player_Right.png");
+	if (!game->player_right)
+		write_error("Error while loading png");
+}
 
 // void	load_player(t_game *game, char dir)
 // {
