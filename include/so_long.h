@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/09 22:45:15 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/09 23:56:24 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,6 @@ typedef struct s_game {
 	size_t			player_y;
 	size_t			exit_x;
 	size_t			exit_y;
-	mlx_texture_t	*player_up;
-	mlx_texture_t	*player_down;
-	mlx_texture_t	*player_left;
-	mlx_texture_t	*player_right;
 	t_img			*img;
 	mlx_t			*mlx;
 }	t_game;
@@ -102,8 +98,6 @@ t_img	*load_player_texture(mlx_t *mlx, t_img *img);
 void	fill_background(t_game *game);
 void	select_image(t_game *game, size_t y, size_t x);
 void	render_map(t_game *game);
-void	load_player_textures(t_game *game);
-// void		load_player(t_game *game, char dir);
 void	screen_str(t_game *game);
 void	print_moves(t_game *game);
 void	print_collectibles(t_game *game);

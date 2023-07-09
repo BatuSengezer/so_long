@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:34:10 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/09 22:57:16 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/09 23:53:50 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ t_game	*init_game_struct(char **map_grid)
 	game->player_y = get_position(game, 'y', 'P');
 	game->exit_x = get_position(game, 'x', 'E');
 	game->exit_y = get_position(game, 'y', 'E');
-	load_player_textures(game);
 	return (game);
 }
 
