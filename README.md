@@ -2,7 +2,7 @@
 A 2D game written using MLX42 graphics library 
 
 The map can be composed of only these 5 characters:
-0 for an empty space, 
+0 for an empty space, <br>
 1 for a wall, 
 C for a collectible, 
 E for a map exit, 
