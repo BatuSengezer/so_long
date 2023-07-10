@@ -18,4 +18,18 @@ void	write_error(char *str)
 	ft_putendl_fd(str, 2);
 	exit (1);
 }
-// add free map here if there is memory leak in case error
+
+void	free_game(t_game *game)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < game->height)
+	{
+		free(game->map_grid[i]);
+		i++;
+	}
+	free(game->map_grid);
+	free(game->img);
+	free(game);
+}

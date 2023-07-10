@@ -6,7 +6,7 @@
 /*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:28:08 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:28:36 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/10 20:38:30 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	move_player(t_game *game, char dir)
 		move_right(game);
 	if (dir == 'a')
 		move_left(game);
-	// load_player(game, dir);
 }
 
 void	pick_collectibles(t_game *game, int y, int x)

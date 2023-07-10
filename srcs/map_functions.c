@@ -6,7 +6,7 @@
 /*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:24:01 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:27:47 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/10 20:37:56 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*read_map(char *map)
 {
 	char	*line;
 	char	*map_str;
-	char 	*tmp;
+	char	*tmp;
 	int		fd;
 
 	fd = open(map, O_RDONLY);

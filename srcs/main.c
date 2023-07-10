@@ -6,7 +6,7 @@
 /*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:36:22 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:37:45 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/10 20:39:42 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,6 @@ int	main(int ac, char **av)
 	mlx_loop_hook(game->mlx, enemy_hook, game);
 	mlx_loop(game->mlx);
 	mlx_terminate(game->mlx);
-	//while(game->width-- > 0);
-	size_t  i = 0;
-	while(i < game->height)
-	{
-		free(game->map_grid[i]);
-		i++;
-	}
-	free(game->map_grid);
-	free(game->img);
-	free(game);
+	free_game(game);
 	return (0);
 }

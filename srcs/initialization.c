@@ -27,13 +27,6 @@ t_game	*init_game(char *map)
 	game = init_game_struct(map_arr);
 	flood_fill(game);
 	free(map_str);
-	// free array causes memory leaks
-	// while (map_arr[i])
-	// {
-	// 	free(map_arr[i]);
-	// 	i++;
-	// }
-	// free(map_arr);
 	return (game);
 }
 
