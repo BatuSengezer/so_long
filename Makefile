@@ -1,8 +1,7 @@
 NAME = so_long
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
-MLX42FLAGS = -lglfw -framework Cocoa -framework OpenGL -framework IOKit
-# MLX42FLAGS = -framework Cocoa -framework OpenGL -framework IOKit // for mac 
+# MLX42FLAGS = -lglfw -framework Cocoa -framework OpenGL -framework IOKit // for mac
 MLX42FLAGS = -ldl -lglfw -pthread -lm 
 LIBFT = ./libft/libft.a
 LIBMLX42 = ./MLX42/build/libmlx42.a
@@ -21,7 +20,6 @@ SRC	= $(addprefix $(SRC_DIR), $(SRCS))
 OBJ = $(addprefix $(OBJ_DIR), $(notdir $(SRC:.c=.o)))
 
 all:	check_MLX42_dir	$(NAME) 
-# all:	$(NAME)
 
 $(NAME): $(LIBFT) libmlx $(LIBMLX42) $(OBJ)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT) $(LIBMLX42) $(MLX42FLAGS)
