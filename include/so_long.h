@@ -24,6 +24,10 @@ typedef struct s_img {
 	mlx_image_t			*grass;
 	mlx_image_t			*collectible;
 	mlx_image_t			*player;
+	mlx_image_t			*player_right;
+	mlx_image_t			*player_left;
+	mlx_image_t			*player_top;
+	mlx_image_t			*player_bottom;
 	mlx_image_t			*exit_closed;
 	mlx_image_t			*exit_open;
 	mlx_image_t			*enemy;

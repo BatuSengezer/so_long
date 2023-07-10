@@ -45,7 +45,14 @@ t_game	*move_down(t_game *game)
 			game->collected += 1;
 		}
 		game->player_y += 1;
-		game->img->player->instances[0].y += 1 * PIXELS;
+		game->img->player_right->instances[0].y += 1 * PIXELS;
+		game->img->player_right->instances[0].enabled = false; 
+		game->img->player_left->instances[0].y += 1 * PIXELS;
+		game->img->player_left->instances[0].enabled = false;
+		game->img->player_top->instances[0].y += 1 * PIXELS;
+		game->img->player_top->instances[0].enabled = false;
+		game->img->player_bottom->instances[0].y += 1 * PIXELS;
+		game->img->player_bottom->instances[0].enabled = true;
 		game->steps += 1;
 	}
 	win_check(game);
