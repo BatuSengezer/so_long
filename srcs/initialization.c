@@ -18,9 +18,9 @@ t_game	*init_game(char *map)
 	char	*map_str;
 	char	**map_arr;
 	t_game	*game;
-	// size_t	i;
+	size_t	i;
 
-	// i = 0;
+	i = 0;
 	map_str = read_map(map);
 	map_check(map_str);
 	map_arr = ft_split(map_str, '\n');
@@ -38,16 +38,16 @@ t_game	*init_game(char *map)
 }
 
 // fills game struct with map information
-t_game	*init_game_struct(char **map_grid)
+t_game	*init_game_struct(char **map_arr)
 {
 	t_game	*game;
 
 	game = (t_game *)ft_calloc(1, sizeof(t_game));
 	if (!game)
 		write_error("Memory allocation error!");
-	game->width = ft_strlen(map_grid[0]);
-	game->height = count_rows(map_grid);
-	game->map_grid = map_grid;
+	game->width = ft_strlen(map_arr[0]);
+	game->height = count_rows(map_arr);
+	game->map_grid = map_arr;
 	game->steps = 0;
 	game->collectibles = count_collectibles(game);
 	game->player_x = get_position(game, 'x', 'P');

@@ -35,5 +35,15 @@ int	main(int ac, char **av)
 	mlx_loop_hook(game->mlx, enemy_hook, game);
 	mlx_loop(game->mlx);
 	mlx_terminate(game->mlx);
+	//while(game->width-- > 0);
+	size_t  i = 0;
+	while(i < game->height)
+	{
+		free(game->map_grid[i]);
+		i++;
+	}
+	free(game->map_grid);
+	free(game->img);
+	free(game);
 	return (0);
 }
