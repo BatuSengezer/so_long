@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:34:10 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/09 23:53:50 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 02:58:11 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ t_game	*init_game(char *map)
 	char	*map_str;
 	char	**map_arr;
 	t_game	*game;
-	size_t	i;
 
-	i = 0;
 	map_str = read_map(map);
 	map_check(map_str);
 	map_arr = ft_split(map_str, '\n');
