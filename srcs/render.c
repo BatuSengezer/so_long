@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:40:34 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:43:14 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:41:32 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,12 @@ void	select_image(t_game *game, size_t y, size_t x)
 		if (mlx_image_to_window(game->mlx, game->img->exit_closed,
 				x * PIXELS, y * PIXELS) < 0)
 			write_error("Error during img to window!");
-	if (game->map_grid[y][x] == 'P')
-		load_player(game, y, x);
-		//if (mlx_image_to_window(game->mlx, game->img->player,
-		//		x * PIXELS, y * PIXELS) < 0)
-		//	write_error("Error during img to window!");
 	if (game->map_grid[y][x] == 'X')
 		if (mlx_image_to_window(game->mlx, game->img->enemy,
 				x * PIXELS, y * PIXELS) < 0)
 			write_error("Error during img to window!");
+	if (game->map_grid[y][x] == 'P')
+		load_player(game, y, x);
 }
 
 
