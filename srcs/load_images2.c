@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 16:41:29 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/09 23:54:59 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 22:50:41 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ t_img	*load_enemy_texture(mlx_t *mlx, t_img *img)
 	mlx_delete_texture(enemy);
 	return (img);
 }
-

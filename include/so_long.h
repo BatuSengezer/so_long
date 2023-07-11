@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 18:25:37 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 22:44:32 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,10 +120,10 @@ t_game	*move_up(t_game *game);
 t_game	*move_down(t_game *game);
 t_game	*move_left(t_game *game);
 t_game	*move_right(t_game *game);
-void 	move_up_core(t_game *game);
-void 	move_down_core(t_game *game);
-void 	move_left_core(t_game *game);
-void 	move_right_core(t_game *game);
+void	move_up_core(t_game *game);
+void	move_down_core(t_game *game);
+void	move_left_core(t_game *game);
+void	move_right_core(t_game *game);
 void	pick_collectibles(t_game *game, int y, int x);
 void	win_check(t_game *game);
 void	enemy_hook(void *tmp);

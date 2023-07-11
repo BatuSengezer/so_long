@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:40:34 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 18:23:54 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 22:50:18 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,30 @@ void	fill_background(t_game *game)
 	}
 }
 
-void load_player(t_game *game, size_t y, size_t x)
+void	load_player(t_game *game, size_t y, size_t x)
 {
-	if (mlx_image_to_window(game->mlx, game->img->player, x * PIXELS, y * PIXELS) < 0)
-			write_error("Error during img to window!");
+	if (mlx_image_to_window(game->mlx, game->img->player,
+			x * PIXELS, y * PIXELS) < 0)
+		write_error("Error during img to window!");
 	game->img->player->instances[0].enabled = true;
-	if (mlx_image_to_window(game->mlx, game->img->player_right, x * PIXELS, y * PIXELS) < 0)
-			write_error("Error during img to window!");
+	if (mlx_image_to_window(game->mlx, game->img->player_right,
+			x * PIXELS, y * PIXELS) < 0)
+		write_error("Error during img to window!");
 	game->img->player_right->instances[0].enabled = false;
-	if (mlx_image_to_window(game->mlx, game->img->player_left, x * PIXELS, y * PIXELS) < 0)
-			write_error("Error during img to window!");
+	if (mlx_image_to_window(game->mlx, game->img->player_left,
+			x * PIXELS, y * PIXELS) < 0)
+		write_error("Error during img to window!");
 	game->img->player_left->instances[0].enabled = false;
-	if (mlx_image_to_window(game->mlx, game->img->player_up, x * PIXELS, y * PIXELS) < 0)
-			write_error("Error during img to window!");
+	if (mlx_image_to_window(game->mlx, game->img->player_up,
+			x * PIXELS, y * PIXELS) < 0)
+		write_error("Error during img to window!");
 	game->img->player_up->instances[0].enabled = false;
-	if (mlx_image_to_window(game->mlx, game->img->player_down, x * PIXELS, y * PIXELS) < 0)
-			write_error("Error during img to window!");
+	if (mlx_image_to_window(game->mlx, game->img->player_down,
+			x * PIXELS, y * PIXELS) < 0)
+		write_error("Error during img to window!");
 	game->img->player_down->instances[0].enabled = false;
 }
+
 void	select_image(t_game *game, size_t y, size_t x)
 {
 	size_t	img_size;
@@ -75,7 +81,6 @@ void	select_image(t_game *game, size_t y, size_t x)
 	if (game->map_grid[y][x] == 'P')
 		load_player(game, y, x);
 }
-
 
 void	render_map(t_game *game)
 {

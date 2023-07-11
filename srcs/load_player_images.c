@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   load_player_images.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsengeze <bsengeze@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/11 22:44:50 by bsengeze          #+#    #+#             */
+/*   Updated: 2023/07/11 22:45:32 by bsengeze         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/so_long.h"
 
 t_img	*load_player_texture(mlx_t *mlx, t_img *img)
@@ -14,7 +26,6 @@ t_img	*load_player_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-
 t_img	*load_player_right_texture(mlx_t *mlx, t_img *img)
 {
 	mlx_texture_t	*player_right;
@@ -29,7 +40,7 @@ t_img	*load_player_right_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-t_img *load_player_left_texture(mlx_t *mlx, t_img *img)
+t_img	*load_player_left_texture(mlx_t *mlx, t_img *img)
 {
 	mlx_texture_t	*player_left;
 
@@ -43,7 +54,7 @@ t_img *load_player_left_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-t_img *load_player_up_texture(mlx_t *mlx, t_img *img)
+t_img	*load_player_up_texture(mlx_t *mlx, t_img *img)
 {
 	mlx_texture_t	*player_up;
 
@@ -57,7 +68,7 @@ t_img *load_player_up_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-t_img *load_player_down_texture(mlx_t *mlx, t_img *img)
+t_img	*load_player_down_texture(mlx_t *mlx, t_img *img)
 {
 	mlx_texture_t	*player_down;
 
