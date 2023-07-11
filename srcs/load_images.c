@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   load_images.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:23:40 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:23:50 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:25:30 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ t_img	*load_grass_texture(mlx_t *mlx, t_img *img)
 	return (img);
 }
 
-t_img	*load_bush_texture(mlx_t *mlx, t_img *img)
+t_img	*load_brick_wall_texture(mlx_t *mlx, t_img *img)
 {
-	mlx_texture_t	*bush;
+	mlx_texture_t	*brick_wall;
 
-	bush = mlx_load_png("./sprites/Bush.png");
-	if (!bush)
+	brick_wall = mlx_load_png("./sprites/Brick_Wall.png");
+	if (!brick_wall)
 		write_error("Error while loading png");
-	img->bush = mlx_texture_to_image(mlx, bush);
-	if (!img->bush)
+	img->brick_wall = mlx_texture_to_image(mlx, brick_wall);
+	if (!img->brick_wall)
 		write_error("Error during texture to image");
-	mlx_delete_texture (bush);
+	mlx_delete_texture (brick_wall);
 	return (img);
 }
 

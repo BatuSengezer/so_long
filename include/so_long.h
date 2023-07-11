@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/09 23:56:24 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:25:37 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define PIXELS 64
 
 typedef struct s_img {
-	mlx_image_t			*bush;
+	mlx_image_t			*brick_wall;
 	mlx_image_t			*grass;
 	mlx_image_t			*collectible;
 	mlx_image_t			*player;
@@ -94,7 +94,7 @@ void	free_grid(char **grid, size_t grid_height);
 
 // image functions
 t_img	*load_grass_texture(mlx_t *mlx, t_img *img);
-t_img	*load_bush_texture(mlx_t *mlx, t_img *img);
+t_img	*load_brick_wall_texture(mlx_t *mlx, t_img *img);
 t_img	*load_collectible_texture(mlx_t *mlx, t_img *img);
 t_img	*load_exit_closed(mlx_t *mlx, t_img	*img);
 t_img	*load_exit_open(mlx_t *mlx, t_img *img);

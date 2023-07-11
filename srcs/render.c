@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:40:34 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 13:41:32 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:23:54 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	select_image(t_game *game, size_t y, size_t x)
 
 	img_size = 32;
 	if (game->map_grid[y][x] == '1')
-		if (mlx_image_to_window(game->mlx, game->img->bush,
+		if (mlx_image_to_window(game->mlx, game->img->brick_wall,
 				x * PIXELS, y * PIXELS) < 0)
 			write_error("Error during img to window!"); 
 	if (game->map_grid[y][x] == 'C')

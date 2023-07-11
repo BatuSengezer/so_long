@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:34:10 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 02:58:11 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:24:51 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_img	*init_img_struct(mlx_t *mlx)
 	if (!images)
 		return (NULL);
 	images = load_grass_texture(mlx, images);
-	images = load_bush_texture(mlx, images);
+	images = load_brick_wall_texture(mlx, images);
 	images = load_collectible_texture(mlx, images);
 	images = load_player_texture(mlx, images);
 	images = load_player_right_texture(mlx, images);

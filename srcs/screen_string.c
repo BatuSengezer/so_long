@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   screen_string.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:19:09 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:22:18 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/11 21:07:23 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	screen_str(t_game *game)
 	game->img->print_moves = mlx_put_string(game->mlx, "MOVES:",
 			(game->width - 3) * PIXELS, game->height * PIXELS - 48);
 	mlx_image_to_window(game->mlx, game->img->collectible,
-		(game->width - 1.5) * PIXELS, game->height * PIXELS - 50);
+		(game->width - 1.6) * PIXELS, game->height * PIXELS - 55);
 	mlx_put_string(game->mlx, ":", (game->width - 1.2) * PIXELS,
 		game->height * PIXELS - 48);
 }
@@ -40,6 +40,6 @@ void	print_collectibles(t_game *game)
 	string = ft_itoa(game->collected + 1);
 	mlx_delete_image(game->mlx, game->img->collectibles_count);
 	game->img->collectibles_count = mlx_put_string(game->mlx, string,
-			(game->width - 1) * PIXELS, game->height * PIXELS -48);
+			(game->width - 1) * PIXELS, game->height * PIXELS - 48);
 	free(string);
 }
