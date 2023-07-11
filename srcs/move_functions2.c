@@ -24,13 +24,12 @@ t_game	*move_up(t_game *game)
 			game->map_grid[game->player_y - 1][game->player_x] = '0';
 			game->collected += 1;
 		}
-		game->player_y -= 1;
-		game->img->player->instances[0].y -= 1 * PIXELS;
-		game->steps += 1;
+		move_up_core(game);
 	}
 	win_check(game);
 	return (game);
 }
+
 
 t_game	*move_down(t_game *game)
 {
@@ -44,13 +43,14 @@ t_game	*move_down(t_game *game)
 			game->map_grid[game->player_y + 1][game->player_x] = '0';
 			game->collected += 1;
 		}
-		game->player_y += 1;
-		game->img->player->instances[0].y += 1 * PIXELS;
-		game->steps += 1;
+		move_down_core(game);
+	
 	}
 	win_check(game);
 	return (game);
 }
+
+
 
 t_game	*move_right(t_game *game)
 {
@@ -64,13 +64,15 @@ t_game	*move_right(t_game *game)
 			game->map_grid[game->player_y][game->player_x + 1] = '0';
 			game->collected += 1;
 		}
-		game->player_x += 1;
-		game->img->player->instances[0].x += 1 * PIXELS;
-		game->steps += 1;
+		//game->player_x += 1;
+		//game->img->player->instances[0].x += 1 * PIXELS;
+		//game->steps += 1;
+		move_right_core(game);
 	}
 	win_check(game);
 	return (game);
 }
+
 
 t_game	*move_left(t_game *game)
 {
@@ -84,10 +86,9 @@ t_game	*move_left(t_game *game)
 			game->map_grid[game->player_y][game->player_x - 1] = '0';
 			game->collected += 1;
 		}
-		game->player_x -= 1;
-		game->img->player->instances[0].x -= 1 * PIXELS;
-		game->steps += 1;
+		move_left_core(game);
 	}
+
 	win_check(game);
 	return (game);
 }

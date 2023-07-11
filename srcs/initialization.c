@@ -62,6 +62,10 @@ t_img	*init_img_struct(mlx_t *mlx)
 	images = load_bush_texture(mlx, images);
 	images = load_collectible_texture(mlx, images);
 	images = load_player_texture(mlx, images);
+	images = load_player_right_texture(mlx, images);
+	images = load_player_left_texture(mlx, images);
+	images = load_player_down_texture(mlx, images);
+	images = load_player_up_texture(mlx, images);
 	images = load_exit_closed(mlx, images);
 	images = load_exit_open(mlx, images);
 	images = load_enemy_texture(mlx, images);

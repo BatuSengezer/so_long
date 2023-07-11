@@ -40,6 +40,7 @@ void	move_player(t_game *game, char dir)
 		move_right(game);
 	if (dir == 'a')
 		move_left(game);
+	//load_player(game, dir);
 }
 
 void	pick_collectibles(t_game *game, int y, int x)
