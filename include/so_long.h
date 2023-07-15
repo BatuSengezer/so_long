@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 22:44:32 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:19:12 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ typedef struct s_var {
 	int				index_x;
 	int				index_y;
 }	t_tmp;
-
-int		main(int ac, char **av);
 
 // error functions
 
