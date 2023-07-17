@@ -51,7 +51,7 @@ typedef struct s_game {
 	mlx_t			*mlx;
 }	t_game;
 
-typedef struct s_var {
+typedef struct s_tmp {
 	int				ran_x;
 	int				ran_y;
 	int				*x;
