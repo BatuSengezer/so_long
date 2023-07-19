@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:28:08 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 13:27:14 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/19 13:31:13 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,12 @@ void	move_hook(mlx_key_data_t keydata, void *tmp)
 	if (mlx_is_key_down(game->mlx, MLX_KEY_ESCAPE))
 		mlx_close_window(game->mlx);
 	if (keydata.key == MLX_KEY_W && keydata.action == MLX_PRESS)
-		move_player(game, 'w');
-	if (keydata.key == MLX_KEY_S && keydata.action == MLX_PRESS)
-		move_player(game, 's');
-	if (keydata.key == MLX_KEY_D && keydata.action == MLX_PRESS)
-		move_player(game, 'd');
-	if (keydata.key == MLX_KEY_A && keydata.action == MLX_PRESS)
-		move_player(game, 'a');
-}
-
-void	move_player(t_game *game, char dir)
-{
-	if (dir == 'w')
 		move_up(game);
-	if (dir == 's')
+	if (keydata.key == MLX_KEY_S && keydata.action == MLX_PRESS)
 		move_down(game);
-	if (dir == 'd')
+	if (keydata.key == MLX_KEY_D && keydata.action == MLX_PRESS)
 		move_right(game);
-	if (dir == 'a')
+	if (keydata.key == MLX_KEY_A && keydata.action == MLX_PRESS)
 		move_left(game);
 }
 

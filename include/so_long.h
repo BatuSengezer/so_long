@@ -6,7 +6,7 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:44:49 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/15 14:24:07 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/19 13:33:22 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,6 @@ void	print_collectibles(t_game *game);
 // move functions
 
 void	move_hook(mlx_key_data_t keydata, void *tmp);
-void	move_player(t_game *game, char dir);
 t_game	*move_up(t_game *game);
 t_game	*move_down(t_game *game);
 t_game	*move_left(t_game *game);
