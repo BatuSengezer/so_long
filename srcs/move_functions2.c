@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   move_functions2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:17:29 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 22:52:04 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:37:17 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 t_game	*move_up(t_game *game)
 {

@@ -6,11 +6,11 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:19:09 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 21:07:23 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:37:11 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	screen_str(t_game *game)
 {

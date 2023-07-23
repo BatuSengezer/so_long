@@ -6,11 +6,11 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:40:34 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/19 13:33:17 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:37:14 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	fill_background(t_game *game)
 {

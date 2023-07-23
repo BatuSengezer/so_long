@@ -6,11 +6,11 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:34:10 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 18:24:51 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:36:11 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 // takes map as argument and initializes game
 t_game	*init_game(char *map)

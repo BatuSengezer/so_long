@@ -6,11 +6,11 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 22:51:00 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/19 13:33:46 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:36:56 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 void	move_up_core(t_game *game)
 {

@@ -6,11 +6,11 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:28:08 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/19 13:31:13 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:37:20 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 // function that processes keyboard input into game
 void	move_hook(mlx_key_data_t keydata, void *tmp)

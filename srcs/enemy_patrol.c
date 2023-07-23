@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   enemy_patrol.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 16:39:53 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 16:41:15 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:35:15 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 // function for enemy patrol loop
 void	enemy_hook(void *tmp)

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   load_player_images.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <bsengeze@student.42berlin.d      +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 22:44:50 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 22:45:32 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:35:45 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 t_img	*load_player_texture(mlx_t *mlx, t_img *img)
 {

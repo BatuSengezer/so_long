@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   flood_fill.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:22:36 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/08 17:23:15 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:35:31 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 // flood fill algorithm to check valid path on the map 
 void	flood_fill(t_game *game)

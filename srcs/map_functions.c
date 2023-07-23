@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   map_functions.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsengeze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:24:01 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/10 20:37:56 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:36:46 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "so_long.h"
 
 // checks map for errors
 void	map_check(char *map_str)

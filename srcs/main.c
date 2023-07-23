@@ -6,11 +6,11 @@
 /*   By: bsengeze <bsengeze@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:36:22 by bsengeze          #+#    #+#             */
-/*   Updated: 2023/07/11 13:40:43 by bsengeze         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:36:30 by bsengeze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#	include "../include/so_long.h"
+#include "so_long.h"
 
 int	main(int ac, char **av)
 {
